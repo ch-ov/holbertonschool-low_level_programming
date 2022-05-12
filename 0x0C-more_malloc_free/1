@@ -1,0 +1,30 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * string_nconcat - Concatenates two strings.
+ * @s1: First String to be concatenated.
+ * @s2: Second String to be concatenated.
+ * @n: Counter for the string.
+ * Return: newchar.
+*/
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	int i, j;
+	char *concat;
+
+	for (i = 0; s1[i] != '\0'; i++)
+		continue;
+	for (j = 0; s2[j] != '\0'; j++)
+
+	concat = malloc(sizeof(char) * (i + j + 1));
+	if (concat == NULL)
+		return (NULL);
+	for (n = 0; s1[n] != '\0'; n++)
+		concat[n] = s1[n];
+
+	for (n = 0; s2[n] != '\0'; n++)
+		concat[i + n] = s2[n];
+	concat[i + n] = '\0';
+	return (concat);
+}
